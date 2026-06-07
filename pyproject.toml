@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "VedatMSA"
+version = "1.0.1"
+description = "MUSCLE algoritmasıyla Çoklu Dizi Hizalaması"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Vedat Ersoy" }]
+requires-python = ">=3.8"
+keywords = ["bioinformatics", "MSA", "MUSCLE", "alignment"]
+
+[project.urls]
+Homepage = "https://github.com/ersoy0710-tech/VedatMSA"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vedatmsa*"]

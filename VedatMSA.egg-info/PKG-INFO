@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: VedatMSA
+Version: 1.0.1
+Summary: MUSCLE algoritmasıyla Çoklu Dizi Hizalaması
+Author: Vedat Ersoy
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ersoy0710-tech/VedatMSA
+Keywords: bioinformatics,MSA,MUSCLE,alignment
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# VedatMSA
+
+MUSCLE algoritmasıyla Çoklu Dizi Hizalaması (Multiple Sequence Alignment)
+
+Vedat Ersoy — İstanbul Rumeli Üniversitesi Yazılım Mühendisliği
+
+## Kurulum
+
+```bash
+pip install VedatMSA
+```
+
+## Kullanım
+
+```python
+from vedatmsa import muscle
+
+diziler = [
+    ("Insan",  "ATCGATCGTTGCA"),
+    ("Fare",   "ATCGTTCGTTGCA"),
+    ("Tavuk",  "ATCGAACGTTGTA"),
+]
+
+sonuc = muscle(diziler, verbose=True)
+
+for isim, hizalanmis in sonuc:
+    print(f"{isim:10} {hizalanmis}")
+```
+
+## Algoritma
+
+MUSCLE 3 aşamada çalışır:
+
+1. **Aşama 1** — k-mer mesafe matrisi + UPGMA ağacı + progressive alignment
+2. **Aşama 2** — Hizalanmış dizilerle yeni mesafe matrisi + yeni ağaç + tekrar hizalama  
+3. **Aşama 3** — Refinement: hizalamayı bölerek iteratif iyileştirme

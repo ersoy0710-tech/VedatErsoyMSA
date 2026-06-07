@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+VedatMSA.egg-info/PKG-INFO
+VedatMSA.egg-info/SOURCES.txt
+VedatMSA.egg-info/dependency_links.txt
+VedatMSA.egg-info/top_level.txt
+vedatmsa/__init__.py
+vedatmsa/align.py
+vedatmsa/distance.py
+vedatmsa/muscle.py
+vedatmsa/tree.py
